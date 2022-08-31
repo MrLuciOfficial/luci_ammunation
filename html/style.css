@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: none !important;
+    user-select: none;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.shop {
+    display: flex;
+    flex-direction: column;
+    background: #202020;
+    width: 815px;
+    height: 420px;
+    border-radius: 10px;
+    border: 3px solid #1b1b1b;
+    animation: animacija 0.3s ease;
+}
+
+.naslov {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #9c2e21;
+    width: 100%;
+    height: 90px;
+    border-radius: 10px 10px 0 0;
+    padding: 0 20px;
+    margin-bottom: 3px;
+}
+
+.naslov img {
+    width: 153.6px;
+    height: 76.8px;
+}
+
+.naslov i {
+    display: none;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.izbornik {
+    display: flex;
+    align-items: center;
+    height: 330px;
+    overflow-x: scroll;
+}
+
+.item {
+    background: #505050;
+    width: 250px;
+    height: 250px;
+    margin: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.informacije {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    transition: all 0.3s ease;
+}
+
+.informacije h2 {
+    color: #fff;
+    text-shadow: -1px 1px 2px #000, 1px 1px 2px #000, 1px -1px 0 #000, -1px -1px 0 #000;
+    text-transform: uppercase;
+}
+
+.item:nth-child(1) .informacije {
+    background: linear-gradient(rgba(156, 46, 33, .6), rgba(156, 46, 33, .6)), url(./img/hladno.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item:nth-child(2) .informacije {
+    background: linear-gradient(rgba(156, 46, 33, .6), rgba(156, 46, 33, .6)), url(./img/vatreno.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.item:nth-child(3) .informacije {
+    background: linear-gradient(rgba(156, 46, 33, .6), rgba(156, 46, 33, .6)), url(./img/ostalo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.informacije:hover {
+    transform: scale(1.1);
+}
+
+.item:nth-child(1) .informacije:hover {
+    background: url(./img/hladno.png);
+}
+
+.item:nth-child(2) .informacije:hover {
+    background: url(./img/vatreno.png);
+}
+
+.item:nth-child(3) .informacije:hover {
+    background: url(./img/ostalo.png);
+}
+
+.hladno-meni,
+.vatreno-meni,
+.oprema-meni {
+    display: none;
+    align-items: center;
+    height: 330px;
+    overflow-x: scroll;
+}
+
+.shop-item {
+    background: #505050;
+    flex: 0 0 30%;
+    height: 250px;
+    margin: 0 10px;
+    border-radius: 10px;
+    scrollbar-width: thin;
+}
+
+.shop-item img {
+    display: block;
+    width: 250px;
+    height: 150px;
+    padding: 10px 0;
+}
+
+.shop-infromacije {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.shop-infromacije h2 {
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.shop-infromacije p {
+    background: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 4px 0;
+    width: 250px;
+}
+
+.shop-infromacije button {
+    color: #fff;
+    background: #9c2e21;
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-radius: 0 0 10px 10px;
+    transition: all 0.3s ease;
+}
+
+.shop-infromacije button:hover {
+    background: #5f1f17;
+}
+
+.shop-infromacije button:active {
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #fff;
+    border-right: 1px solid #fff;
+}
+
+::-webkit-scrollbar {
+    height: 6px;
+}
+  
+::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 0 0 10px 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #505050;
+    border-radius: 10px;
+}
+
+@keyframes animacija {
+    from {
+        transform: scale(0) translateY(100%);
+    }
+    to {
+        transform: scale(1) translateY(0px);
+    }
+}
